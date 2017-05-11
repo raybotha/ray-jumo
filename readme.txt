@@ -48,9 +48,9 @@ dictionary whilst calculating a running average and count. But this approach wou
 the scale of loans is increased, or the data-points used for validation changes.
 For dealing with the problems of scale and performance, I've used the Dask library, which is a parallel
 computing library that wraps most of the Pandas data processing library. Dask ensures that memory
-constraints are kept in mind when loading and manipulating a large list of loans, and that CPU multiprocessing
-is fully utilised. In case of massive scale, Dask can easily be set to run on several clients in a distributed
-computing system.
+constraints are kept in mind when loading and manipulating a large list of loans, and that CPU
+multiprocessing is fully utilised. In case of massive scale, Dask can easily be set to run on several
+clients in a distributed computing system.
 
 I've used the standard Python CSV module to write the output file, there's no need to optimise here.
 
@@ -72,11 +72,12 @@ Setup and Usage
 Extra Testing
 -------------
 I wrote a small Python program to generate randomized loan data, in order to test how well my solution
-performs at extremes. I only tested up to ten million loans, since generating random data in Python at a large scale
-takes about twenty times longer than analysing it.
+performs at extremes. I only tested up to ten million loans, since generating random data in Python at a
+large scale takes about twenty times longer than analysing it.
 
 -Tool included in testing directory.
--Make sure the main requiremnets are installed, one of these (Faker) is exclusively used here for random dates.
--Run with 'python gencsv.py <n>' - n is for specifying how many loans to generate, here n specifies 10 to the power n
- loans, so 'python gencsv.py 6' would generate one million random loans.
+-Make sure the main requiremnets are installed, one of these (Faker) is exclusively used here for random
+ dates.
+-Run with 'python gencsv.py <n>' - n is for specifying how many loans to generate, here n specifies 10 to the
+ power n loans, so 'python gencsv.py 6' would generate one million random loans.
 -The randomised data is stored as generated_loans.csv.

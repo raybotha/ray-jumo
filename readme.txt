@@ -78,6 +78,6 @@ large scale takes about twenty times longer than analysing it.
 -Tool included in testing directory.
 -Make sure the main requiremnets are installed, one of these (Faker) is exclusively used here for random
  dates.
--Run with 'python gencsv.py <n>' - n is for specifying how many loans to generate, here n specifies 10 to the
- power n loans, so 'python gencsv.py 6' would generate one million random loans.
+-Run with 'python gencsv.py <n>' - n is for specifying how many loans to generate, here n specifies 10 to
+ the power n loans, so 'python gencsv.py 6' would generate one million random loans.
 -The randomised data is stored as generated_loans.csv.
